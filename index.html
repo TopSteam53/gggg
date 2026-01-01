@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine Drop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__eyebrow">Telegram Mini App</p>
+          <h1>Mine Drop</h1>
+          <p class="app__subtitle">Выбери безопасные плитки и собери кристаллы.</p>
+        </div>
+        <div class="app__stats">
+          <div>
+            <span class="label">Ставка</span>
+            <span class="value" id="betValue">100</span>
+          </div>
+          <div>
+            <span class="label">Выигрыш</span>
+            <span class="value" id="winValue">0</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="board" aria-live="polite">
+        <div class="board__grid" id="grid"></div>
+        <div class="board__overlay" id="overlay">
+          <div class="board__message" id="overlayMessage">
+            Нажмите «Старт», чтобы начать раунд.
+          </div>
+          <button class="button" id="restartButton">Играть снова</button>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="control">
+          <label for="mineCount">Количество мин</label>
+          <input id="mineCount" type="range" min="3" max="12" value="6" />
+          <span id="mineValue">6</span>
+        </div>
+        <div class="control">
+          <label for="betInput">Ставка</label>
+          <input id="betInput" type="number" min="50" max="1000" value="100" />
+        </div>
+        <div class="control">
+          <button class="button button--primary" id="startButton">Старт</button>
+          <button class="button button--ghost" id="cashoutButton" disabled>
+            Забрать
+          </button>
+        </div>
+      </section>
+
+      <footer class="app__footer">
+        <p>Подходит для стилистики TikTok: быстрые раунды, неоновый блеск, простая механика.</p>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
