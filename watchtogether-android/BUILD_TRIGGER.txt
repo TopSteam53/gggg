@@ -1,0 +1,1 @@
+Build trigger for the Watch Together Android test APK.
